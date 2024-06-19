@@ -29,7 +29,7 @@ const LoginPage = () => {
             });
             const data = await response.json();
             if (data.error) {
-                setMessage(data.error)
+               return setMessage(data.error)
             }
 
             

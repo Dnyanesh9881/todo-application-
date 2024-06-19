@@ -31,7 +31,7 @@ const SignupPage = () => {
             });
             const data = await response.json();
             if (data.error) {
-                setMessage(data.error)
+                return setMessage(data.error)
             }
             setToken(data);
             localStorage.setItem("token", JSON.stringify(data));
