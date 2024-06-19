@@ -1,0 +1,84 @@
+.all{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: #4070f4;
+  height: 100vh;
+}
+
+.signup_card, .login_card{
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signup_form, .login_form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signup_form input, .login_form input {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.signup_form button, .login_form button{
+  padding: 0.6rem;
+  background-color: #4070f4;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+}
+table, td, th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td, th{
+  padding: 0.3rem 0.6rem;
+}
+.dashboard{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.addtodo{
+  display: flex;
+  gap: 1rem;
+}
+.addtodo_input{
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 1px solid gray;
+}
+.addtodo_btn{
+  padding: 0.6rem 0.8rem;
+  background-color: #4070f4;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+}
+.action_btns_td{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.2rem;
+}
+.action_btn{
+  padding: 0.2rem 0.3rem;
+}
+.logout_btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none ;
+  border-radius: 10px;
+}
+
