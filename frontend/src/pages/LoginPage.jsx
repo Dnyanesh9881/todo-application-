@@ -64,7 +64,7 @@ const LoginPage = () => {
             <div className="login_card">
                 <h1>Login</h1>
                 {
-                    message && <h2>{message}</h2>
+                    message && <p style={{color:"red"}}>{message}</p>
                 }
                 <form className="login_form" onSubmit={handleLogin}>
                     <input id="lEmail" type="text" placeholder="Enter loginId" name="loginId" value={user.loginId} onChange={changeInput} />

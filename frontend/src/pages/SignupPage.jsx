@@ -61,7 +61,7 @@ const SignupPage = () => {
             <div className="signup_card">
                 <h1>Sign Up</h1>
                 {
-                    message && <h2>{message}</h2>
+                    message && <p style={{color:"red"}}>{message}</p>
                 }
                 <form className="signup_form" onSubmit={handleSignup}>
 
