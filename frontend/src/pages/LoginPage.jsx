@@ -7,7 +7,7 @@ import UserContext from "../context/UserContext.jsx";
 
 const LoginPage = () => {
 
-    const { setToken } = useContext(UserContext);
+    const { token, setToken } = useContext(UserContext);
     const [user, setUser] = useState({
         loginId: "",
         password: "",
@@ -15,7 +15,6 @@ const LoginPage = () => {
     const [message, setMessage] = useState("");
 
     const navigate = useNavigate();
-
     async function handleLogin(e) {
         e.preventDefault();
       const error=validateLoginData({...user});

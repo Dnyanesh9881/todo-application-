@@ -1,14 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import LogoutBtn from './components/LogoutBtn';
+import UserContext from './context/UserContext';
 
 
 const App = () => {
-  const token  = JSON.parse(localStorage.getItem('token'));
+  const {token, setToken}  = useContext(UserContext);
+  useEffect(() => {
+    const storedToken = JSON.parse(localStorage.getItem('token'));
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, [setToken]);
   return (
     <Router>
     {  token && <LogoutBtn />}

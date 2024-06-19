@@ -5,7 +5,7 @@ import { validateSignUpData } from "../utils/validation";
 import UserContext from "../context/UserContext.jsx";
 
 const SignupPage = () => {
-    const { setToken } = useContext(UserContext);
+    const {token, setToken } = useContext(UserContext);
     const navigate = useNavigate();
     const [user, setUser] = useState({
         name: "",
@@ -15,9 +15,8 @@ const SignupPage = () => {
         confirmPassword: ""
     });
     const [message, setMessage] = useState("");
-    async function handleSignup() {
-
-    }
+    
+   
     async function handleSignup(e) {
         e.preventDefault();
         const error = validateSignUpData({ ...user });
